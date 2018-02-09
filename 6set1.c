@@ -1,14 +1,20 @@
 #include<stdio.h>
 int main()
 {
-int n,t;
+int n,r[10],i=0,c=0;
 printf("Enter a number");
 scanf("%d",&n);
-while(n>=1)
+while(n>0)
 {
-t=n%10;
-n=n%10;
-printf("%d",t);
+r[i]=n%10;
+n=n/10;
+  c++;
+  i++;
 }
-return 0;
+  for(i=c-1;i>=0;i--)
+  {
+ printf("%d\t",r[i]);
+  }
+  return 0;
 }
+  
